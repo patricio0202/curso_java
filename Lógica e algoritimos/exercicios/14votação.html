@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    //contadores
+    var blumenau = 0, indaial = 0, pomerode = 0
+
+    //voto
+    var voto
+
+    //continuar
+    var continuar
+
+    //laço
+    do{
+      //obter o voto
+      voto = parseInt (prompt('1) blumenau \n2)Indaial \n3)Pomerode'))
+
+      //Contagem
+      switch (voto){
+        case 1:
+          blumenau++
+        break
+        
+        case 2:
+          indaial++
+        break
+
+        case 3:
+          pomerode++
+      }
+
+      //verificar se deseja continuar
+      continuar = confirm ('Deseja continuar a votação')
+
+      }while(continuar == true)
+
+      //somar votos
+      var somarvotos = blumenau + indaial + pomerode
+
+      //resultado
+      document.write ('Blumenau obteve ' + blumenau + ' votos. <br>')
+      document.write ('Indaial obteve ' + indaial + ' votos. <br>')
+      document.write ('Pomeroda obteve ' + pomerode + ' votos.')
+
+      document.write ('<hr>')
+
+      document.write(((100/somarvotos) * blumenau).toFixed(2) + '% votos para Blumenau. <br>')
+      document.write(((100/somarvotos) * indaial).toFixed(2) + '% votos para Indaial. <br>')
+      document.write(((100/somarvotos) * pomerode).toFixed(2) + '% votos para Pomerode. <br>')
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
