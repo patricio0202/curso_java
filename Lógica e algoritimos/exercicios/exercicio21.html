@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+    <script>
+
+      var numeros = []
+      var total = 0
+
+      //pegar numeros
+      for (var indice = 0; indice < 5; indice++){
+        numeros.push (parseInt(prompt('Informe o ' +(indice + 1)+ ' º número')))
+      }
+      // exebir valores
+      for (indice = 0; indice < 5; indice++){
+        total += numeros[indice]
+      }
+      // exibir valores
+      for (var indice = 0; indice < 5; indice++){
+        document.write ((indice+1)+' º valor é ' + numeros[indice]+ '<br>')
+      }
+      //exibir a soma
+      document.write ('A soma dos valores é ' + total)
+
+
+    </script>
+
+</head>
+<body>
+  
+</body>
+</html>

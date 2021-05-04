@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+      var minimo = parseInt (prompt ('Informe um número'))
+      var maximo = parseInt (prompt ('Informe outro número'))
+      var par = 0
+      var inpar = 0
+      var positivo = 0
+      var negativo = 0
+
+      
+
+      while (minimo <= maximo){
+        document.write (minimo + '<br>')
+        
+        if (minimo % 2 == 0 ){
+          par++
+        }else{
+          inpar++
+        }
+
+        if (minimo >= 0){
+          positivo++
+        }else{
+          negativo++
+        }
+        minimo++
+      }
+
+      document.write("<br>" + par + ' números pares')
+      document.write("<br>" + inpar + ' números inpares')
+      document.write("<br>" + positivo + ' números positivos')
+      document.write("<br>" + negativo + ' números negativos')
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

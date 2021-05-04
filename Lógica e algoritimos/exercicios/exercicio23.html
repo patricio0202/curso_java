@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    var numeros = []
+
+    var existe10 = false
+
+    //obter numeros
+    for (var indice = 0; indice < 5; indice++){
+      numeros.push (parseInt(prompt('Informe o ' +(indice + 1)+ ' º número')))
+    }
+
+    for (var indice = 0; indice < 5; indice++)
+      if (numeros[indice] == 10){
+        existe10 = true
+        break
+      }
+
+      if (existe10 == false){
+        document.write ('O número 10 não foi informado')
+      }else{
+        for (var indice = 0; indice < 5; indice++){
+          if (numeros[indice] == 10){
+            document.write ('Há um numero 10 na posição: ' + indice + '<br>')
+          }
+        }
+      }
+
+
+    
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
