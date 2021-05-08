@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+    <script>
+
+        // Vetor
+        var numeros = []
+
+        // Existe
+        var existe = false
+
+        // Indice
+        var indice = 0
+
+        do{
+
+            existe = false
+
+            var n = parseInt(prompt("Informe o"+(indice+1)+"º número"))
+
+            for(var i=0; i<numeros.length; i++){
+                if(numeros[i] == n){
+                    existe = true
+                }
+            }
+
+            if(existe == true){
+                alert("O número informado já existe, tente novamente")
+            }else{
+                numeros[indice] = n
+                indice++
+            }
+
+        }while(indice < 5)
+
+    </script>
+
+</head>
+<body>
+  
+</body>
+</html>
