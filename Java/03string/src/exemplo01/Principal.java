@@ -12,7 +12,7 @@ public class Principal {
 		
 		// Obter caracter
 		for (int i=0; i < texto.length(); i++) {
-			System.out.println("O "+(i+1)+ " caraxter é "+ texto.charAt(i));
+			System.out.println("O "+(i+1)+ " caracter é "+ texto.charAt(i));
 		}
 		
 		// Letras maiúsculas e minúculas
