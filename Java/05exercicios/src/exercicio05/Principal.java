@@ -1,4 +1,4 @@
-package exercicio04;
+package exercicio05;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -16,7 +16,7 @@ import java.awt.event.ActionEvent;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtNome;
+	private JTextField txtPalavra;
 
 	/**
 	 * Launch the application.
@@ -39,45 +39,42 @@ public class Principal extends JFrame {
 	 */
 	public Principal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 185);
+		setBounds(100, 100, 450, 205);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNome = new JLabel("Nome");
-		lblNome.setBounds(195, 24, 46, 14);
-		contentPane.add(lblNome);
+		JLabel lblPalavra = new JLabel("Palavra");
+		lblPalavra.setBounds(181, 31, 46, 14);
+		contentPane.add(lblPalavra);
 		
-		txtNome = new JTextField();
-		txtNome.setBounds(58, 49, 307, 20);
-		contentPane.add(txtNome);
-		txtNome.setColumns(10);
+		txtPalavra = new JTextField();
+		txtPalavra.setBounds(72, 56, 260, 20);
+		contentPane.add(txtPalavra);
+		txtPalavra.setColumns(10);
 		
 		JButton btnEnviar = new JButton("Enviar");
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String nome = txtNome.getText();
+				String palavra = txtPalavra.getText(); 
+				String invertida = new StringBuffer(palavra).reverse().toString();
 				
-				int vogais = 0;
-				int consoantes = 0;
+				palavra = palavra.replace(" ", "");
+				invertida = invertida.replace(" ","");
 				
-				for (int i = 0; i < nome.length(); i++) {
-					if (nome.charAt(i) == 'a' || nome.charAt(i) == 'e' || nome.charAt(i) == 'i' || nome.charAt(i) == 'o' || nome.charAt(i) == 'u') {
-						vogais++;
-					}else {
-						consoantes++;
-					}
+				if (palavra.equals(invertida)) {
+					JOptionPane.showMessageDialog(null, "É palindrome ");
+				}else {
+					JOptionPane.showMessageDialog(null, "Não é palindrome");
 				}
 				
-				JOptionPane.showMessageDialog(null, "vogais: "+ vogais + "\n consoantes: "+ consoantes);
 				
 				
 			}
 		});
-		btnEnviar.setBounds(166, 106, 89, 23);
+		btnEnviar.setBounds(156, 105, 89, 23);
 		contentPane.add(btnEnviar);
 	}
-
 }
