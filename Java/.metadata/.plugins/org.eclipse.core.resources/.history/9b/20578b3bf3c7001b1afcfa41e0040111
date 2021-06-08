@@ -1,0 +1,33 @@
+package Principal;
+
+import java.sql.PreparedStatement;
+
+import BD.Conexao;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		// Iniciar conexão
+		Conexao.iniciarConexao();
+		
+		// SQL 1
+		String sql1 = "INSERT INTO usuarios VALUES (?, ?)";
+		
+		
+		try {
+			// PreparedStatemnet - Executa uma instrução SQL com parâmetros
+			PreparedStatement pstmt = Conexao.conexao.prepareStatement(sql1);
+			pstmt.setString(1, "Jéssica");
+			pstmt.setInt(2, 19);
+			pstmt.execute();
+		}catch(Exception erro){}
+			
+		
+		
+		// Finalizar conexão
+		Conexao.finalizarConexao();
+
+	}
+
+}

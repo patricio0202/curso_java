@@ -1,0 +1,168 @@
+package ex3;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtNome;
+	private JTextField txtNota1;
+	private JTextField txtNota2;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Formulario frame = new Formulario();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Formulario() {
+		
+		// ArrayLista
+		ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+		
+		DefaultTableModel dtm = new DefaultTableModel();
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 396);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setForeground(Color.BLACK);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNome = new JLabel("Nome");
+		lblNome.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNome.setBounds(21, 26, 46, 14);
+		contentPane.add(lblNome);
+		
+		JLabel lblNota1 = new JLabel("Nota 1");
+		lblNota1.setBounds(21, 51, 46, 14);
+		contentPane.add(lblNota1);
+		
+		JLabel lblNota2 = new JLabel("Nota 2");
+		lblNota2.setBounds(21, 76, 46, 14);
+		contentPane.add(lblNota2);
+		
+		txtNome = new JTextField();
+		txtNome.setBounds(74, 23, 296, 20);
+		contentPane.add(txtNome);
+		txtNome.setColumns(10);
+		
+		txtNota1 = new JTextField();
+		txtNota1.setBounds(74, 51, 296, 20);
+		contentPane.add(txtNota1);
+		txtNota1.setColumns(10);
+		
+		txtNota2 = new JTextField();
+		txtNota2.setBounds(74, 76, 296, 20);
+		contentPane.add(txtNota2);
+		txtNota2.setColumns(10);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				// Obter os dados
+				String nome = txtNome.getText();
+				double nota1 = Double.parseDouble(txtNota1.getText());
+				double nota2 = Double.parseDouble(txtNota2.getText());
+				double media;
+				String situacao;
+				
+				media = (nota1 + nota2)/2;
+				
+				if (media >= 7) {
+					situacao = "Aprovado";
+				}else {
+					situacao = "Reprovado";
+				}
+				
+				// Instanciar objeto da classe aluno
+				Aluno a = new Aluno(nome, nota1, nota2, media, situacao);
+				
+				// Cadastrar no ArrayList
+				alunos.add (a);
+				
+				// Limpar os campos
+				txtNome.setText("");
+				txtNota1.setText("");
+				txtNota2.setText("");
+				
+				// Cursor no campo nome
+				txtNome.requestFocus();
+				
+				// Atualizar DefaultTableModel e JTable
+				dtm.setRowCount(0);
+				for (int i = 0; i < alunos.size(); i++) {
+					//dtm.addRow (new object []) {
+					//	alunos.get(i) getNome(),
+					//	alunos.get(i) getnota1(),
+					//	alunos.get(i) getnota2()
+	//		});
+				//}
+				
+				//tabela.setModel(dtm);
+			}
+		//});
+		btnCadastrar.setBounds(10, 117, 89, 23);
+		contentPane.add(btnCadastrar);
+		
+		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar.setEnabled(false);
+		btnAlterar.setBounds(118, 117, 89, 23);
+		contentPane.add(btnAlterar);
+		
+		JButton btnRemover = new JButton("Remover");
+		btnRemover.setEnabled(false);
+		btnRemover.setBounds(228, 117, 89, 23);
+		contentPane.add(btnRemover);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setEnabled(false);
+		btnCancelar.setBounds(335, 117, 89, 23);
+		contentPane.add(btnCancelar);
+		
+		JScrollPane tabela = new JScrollPane();
+		tabela.setBounds(21, 263, 78, -93);
+		contentPane.add(tabela);
+		
+		JScrollPane BarraRolagem = new JScrollPane();
+		BarraRolagem.setBounds(21, 151, 392, 180);
+		contentPane.add(BarraRolagem);
+		
+		tabela = new JTabela();
+		BarraRolagem.setViewportView(tabela);
+	}
+}

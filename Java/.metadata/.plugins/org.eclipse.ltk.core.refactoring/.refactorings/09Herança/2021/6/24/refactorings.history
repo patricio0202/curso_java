@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Principal.cargo&apos; to &apos;Cargo&apos;&#x0D;&#x0A;- Original project: &apos;Herança&apos;&#x0D;&#x0A;- Original element: &apos;Principal.cargo&apos;&#x0D;&#x0A;- Renamed element: &apos;Principal.Cargo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;cargo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Principal{cargo.java[cargo" matchStrategy="1" name="Cargo" qualified="false" references="true" similarDeclarations="false" stamp="1623101994725" textual="false" version="1.0"/>
+</session>

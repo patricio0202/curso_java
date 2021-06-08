@@ -1,0 +1,9 @@
+package Principal;
+
+public class cargo {
+	
+	// Atributos
+	private String cargo;
+	private double salario;
+
+}

@@ -1,0 +1,16 @@
+package Principal;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		final String nome = "Ana";
+		nome = "Felipe";
+
+	}
+	
+	public final void mensagem() {
+		
+	}
+
+}
