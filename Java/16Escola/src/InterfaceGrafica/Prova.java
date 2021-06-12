@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -21,7 +24,7 @@ public class Prova extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Prova() {
+	public Prova(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 434, 300);
 		contentPane = new JPanel();
@@ -50,7 +53,7 @@ public class Prova extends JFrame {
 				dispose();
 				
 				// Exlibir o Jframe professor
-				Professor p = new Professor();
+				Professor p = new Professor(um);
 				p.setVisible(true);
 				
 			}

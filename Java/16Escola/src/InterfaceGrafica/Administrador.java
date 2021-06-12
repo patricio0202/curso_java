@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.JButton;
@@ -21,7 +24,7 @@ public class Administrador extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Administrador() {
+	public Administrador(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 550, 330);
 		contentPane = new JPanel();
@@ -29,7 +32,7 @@ public class Administrador extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblBoasVindas = new JLabel("Boa noite Administrador!");
+		JLabel lblBoasVindas = new JLabel("Boa noite "+ um.getNome());
 		lblBoasVindas.setBounds(10, 11, 157, 14);
 		contentPane.add(lblBoasVindas);
 		
@@ -45,8 +48,8 @@ public class Administrador extends JFrame {
 				// Fechar oJframe
 				dispose();
 				
-				// Exlibir o Jframe Administrador
-				Usuarios u = new Usuarios();
+				// Exlibir o Jframe usuarios
+				Usuarios u = new Usuarios(um);
 				u.setVisible(true);
 				
 			}

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.JButton;
@@ -20,20 +23,20 @@ public class Professor extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Professor() {
+	public Professor(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 631, 300);
+		setBounds(100, 100, 698, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblProfessor = new JLabel("Boa noite Professor");
+		JLabel lblProfessor = new JLabel("Boa noite " + um.getNome());
 		lblProfessor.setBounds(10, 11, 125, 14);
 		contentPane.add(lblProfessor);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(32, 55, 542, 169);
+		panel.setBounds(32, 55, 615, 169);
 		contentPane.add(panel);
 		panel.setLayout(new GridLayout(1, 0, 0, 0));
 		
@@ -45,7 +48,7 @@ public class Professor extends JFrame {
 				dispose();
 				
 				// Exlibir o Jframe professor
-				Prova p = new Prova();
+				Prova p = new Prova(um);
 				p.setVisible(true);
 				
 			}
@@ -61,7 +64,7 @@ public class Professor extends JFrame {
 				dispose();
 				
 				// Exlibir o Jframe Nota
-				Notas n = new Notas();
+				Notas n = new Notas(um);
 				n.setVisible(true);
 				
 			}

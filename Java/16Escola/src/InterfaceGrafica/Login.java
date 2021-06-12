@@ -6,7 +6,12 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Controle.UsuarioControle;
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -55,12 +60,48 @@ public class Login extends JFrame {
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				// Fechar oJframe
-				dispose();
+				// Tentativa
+				try {
 				
-				// Exlibir o Jframe Administrador
-				Administrador A = new Administrador();
-				A.setVisible(true);
+					//Capturar e-mail e senha
+					String email = txtEmail.getText();
+					String senha = String.valueOf(pswSenha.getPassword());	
+					
+					// Autenticar
+					boolean autenticar = UsuarioControle.autenticar(email, senha);
+					
+					// Condicional
+					if (autenticar == false) {
+						JOptionPane.showMessageDialog(null, "E-mail ou senha incorretos");
+					}else {
+						
+						// Obter dados do usuário
+						UsuarioModelo um = UsuarioControle.obterUsuario(email, senha);
+					
+						//Fechar oJframe
+						dispose();
+						
+						//Exlibir o Jframe
+						switch(um.getTipo()) {
+						
+							case 1:
+								Administrador ad = new Administrador(um);
+								ad.setVisible(true);
+							break;
+						
+							case 2:
+								Professor p = new Professor(um);
+								p.setVisible(true);
+							break;
+						
+							case 3:
+								Aluno al = new Aluno();
+								al.setVisible(true);
+							break;
+						}
+						
+					}
+				}catch (Exception erro) {}
 				
 			}
 		});
