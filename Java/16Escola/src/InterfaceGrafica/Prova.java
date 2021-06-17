@@ -7,9 +7,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Controle.ProvaControle;
 import modelo.UsuarioModelo;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
@@ -42,6 +44,29 @@ public class Prova extends JFrame {
 		txtProva.setColumns(10);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				// Obter dados
+				String nomeProva = txtProva.getText();
+				int codigoProfessor = um.getCodigo();
+				
+				// Cadastrar no banco de dados
+				boolean status = ProvaControle.cadastrar(codigoProfessor, nomeProva);
+				
+				// Mensagem
+				JOptionPane.showMessageDialog(null, status == true ? "Prova cadastrada" : "Falha ao cadastrar");
+				
+				// Limpar campo
+				txtProva.setText("");
+				
+				// Cursos no campo
+				txtProva.requestFocus();
+				
+				
+				
+			}
+		});
 		btnCadastrar.setBounds(48, 177, 107, 23);
 		contentPane.add(btnCadastrar);
 		

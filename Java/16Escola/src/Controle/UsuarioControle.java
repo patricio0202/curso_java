@@ -3,10 +3,12 @@ package Controle;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.mysql.cj.protocol.Resultset;
 
 import bd.Conexao;
+import modelo.ProvaModelo;
 import modelo.UsuarioModelo;
 
 public class UsuarioControle {
@@ -140,6 +142,49 @@ public class UsuarioControle {
 		// Retorno
 		return status;
 	}
+	
+	// Listar dados dos alunos
+	public static ArrayList<UsuarioModelo> listarAlunos() {
+		
+		// ArrayList
+		ArrayList <UsuarioModelo> alunos = new ArrayList<UsuarioModelo>();
+		
+		// SQL
+		String sql = "SELECT codigoUsuario, nomeUsuario FROM usuarios WHERE tipoUsuario = ?";
+		
+		// Acessar o banco de dados
+		Conexao.iniciarConexao();
+		
+		// Tentativa
+		try {
+			
+			PreparedStatement pstmt = Conexao.conexao.prepareStatement(sql);
+			pstmt.setInt(1, 3);
+			ResultSet rs = pstmt.executeQuery();
+			
+			UsuarioModelo cabecalho = new UsuarioModelo (0, "Aluno");
+			alunos.add(cabecalho);
+			
+			while (rs.next()) {
+				UsuarioModelo um = new UsuarioModelo(rs.getInt(1), rs.getString(2));
+				alunos.add(um);
+			}
+			
+			rs.close();
+			pstmt.close();
+			
+		}catch (Exception erro) {
+			System.out.println("Falha ao listar os alunos " + erro.getMessage());
+		}finally {
+			Conexao.finalizarConexao();
+		}
+		
+		return alunos;
+	}
+		
+	
+	
+	
 
 }
 

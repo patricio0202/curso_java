@@ -7,6 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import Controle.ProvaControle;
+import modelo.UsuarioModelo;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
@@ -22,7 +26,7 @@ public class Aluno extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Aluno() {
+	public Aluno(UsuarioModelo um) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 318);
 		contentPane = new JPanel();
@@ -50,15 +54,11 @@ public class Aluno extends JFrame {
 		btnSair.setBounds(335, 7, 89, 23);
 		contentPane.add(btnSair);
 		
-		DefaultTableModel dtm = new DefaultTableModel();
-		dtm.addColumn("Prova");
-		dtm.addColumn("Nota");
-		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(32, 76, 370, 174);
 		contentPane.add(scrollPane);
 		
-		table = new JTable(dtm);
+		table = new JTable(ProvaControle.provasAluno(um.getCodigo()));
 		scrollPane.setViewportView(table);
 	}
 }

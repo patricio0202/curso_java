@@ -95,7 +95,7 @@ public class Login extends JFrame {
 							break;
 						
 							case 3:
-								Aluno al = new Aluno();
+								Aluno al = new Aluno(um);
 								al.setVisible(true);
 							break;
 						}

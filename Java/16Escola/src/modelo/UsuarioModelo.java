@@ -33,6 +33,13 @@ public class UsuarioModelo {
 		this.tipo = tipo;
 		}
 	
+	// Construtor
+	public UsuarioModelo (int codigo, String nome) {
+		this.codigo = codigo;
+		this.nome = nome;
+	}
+		
+	
 	// Get e Set
 	public int getCodigo() {
 		return codigo;
@@ -112,6 +119,10 @@ public class UsuarioModelo {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+	
+	public String toString () {
+		return nome;
 	}
 
 }
