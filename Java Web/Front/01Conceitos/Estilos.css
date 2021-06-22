@@ -1,19 +1,36 @@
-body{
-  background-color: rgb(255, 255, 255);
-}
+  body{
+    background-color: rgb(255, 255, 255);
+  }
 
-.card{
-  margin-top: 30px;
-  text-align: center;
-  box-shadow: 5px 5px 5px black;
-  transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
-}
 
-.card:hover{
-  transform: scale(1.05, 1.05);
-  box-shadow: 0px 0px 10px black;
-  background-color: rgb(244, 211, 248);
-}
+  a{
+    text-decoration: none !important;
+  }
+
+  input{
+    margin-top: 30px;
+  }
+
+  .card{
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+  }
+
+  .card:hover{
+    transform: scale(1.05, 1.05);
+    box-shadow: 0px 0px 10px black;
+    background-color: rgb(244, 211, 248);
+  }
+  .card button{
+    margin: 4%;
+  }
+
+  .card p{
+    color: #000;
+    text-transform: uppercase;
+  }
 
 .momal{
    text-align: center;

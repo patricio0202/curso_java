@@ -58,3 +58,34 @@ window.onload = function(){
     })
 
 }
+
+// Função de pesquisar
+function pesquisar(texto){
+
+  // Limpar lista
+  lista.innerHTML = ""
+
+  // Filtrar
+  for(var i=0; i<pokemons.length; i++){
+
+      // Extrai o nome do JSON
+      var nomePokemon = pokemons[i].name;
+
+      // Caso não encontre aquele termo, retorna -1. Todos os nomes diferente de -1 serão exibidos
+      if(nomePokemon.indexOf(texto) != -1){
+     
+          // CARD
+          var linha = '<div class="col-xl-2 col-sm-4">'
+                  linha += '<a href="#" class="card" data-bs-toggle="modal" data-bs-target="#modal'+i+'">'
+                      linha += '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+(i+1)+'.png">'
+                      linha += '<p>'+pokemons[i].name+'</p>'
+                      linha += '<button class="btn btn-secondary">Informações</button>'
+                  linha += '</a>'
+              linha += '</div>'
+
+          lista.innerHTML += linha
+        
+      }
+  }
+
+}
