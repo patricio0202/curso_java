@@ -583,46 +583,9 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_p5qJBbdjEeuvJ6MwBCbfug" elementId="org.eclipse.ui.editorss" selectedElement="_p5qJBrdjEeuvJ6MwBCbfug">
-      <children xsi:type="basic:PartStack" xmi:id="_p5qJBrdjEeuvJ6MwBCbfug" elementId="PartStack@3c82bac3" selectedElement="_EkHaIM7_Eeu95cTcIev-Dw">
+      <children xsi:type="basic:PartStack" xmi:id="_p5qJBrdjEeuvJ6MwBCbfug" elementId="PartStack@3c82bac3">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_RV_4kM78Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Login.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Login.java&quot; partName=&quot;Login.java&quot; title=&quot;Login.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Login.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Login.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2249&quot; selectionTopPixel=&quot;817&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_-1CpYM78Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Administrador.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Administrador.java&quot; partName=&quot;Administrador.java&quot; title=&quot;Administrador.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Administrador.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Administrador.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1575&quot; selectionTopPixel=&quot;1083&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_OsPyoM79Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Usuarios.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Usuarios.java&quot; partName=&quot;Usuarios.java&quot; title=&quot;Usuarios.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Usuarios.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Usuarios.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2695&quot; selectionTopPixel=&quot;1083&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_7M6PoM79Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Funcionario.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Funcionario.java&quot; partName=&quot;Funcionario.java&quot; title=&quot;Funcionario.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Funcionario.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Funcionario.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2384&quot; selectionTopPixel=&quot;1577&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_If9aEM7-Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Estoque.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Estoque.java&quot; partName=&quot;Estoque.java&quot; title=&quot;Estoque.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Estoque.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Estoque.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1268&quot; selectionTopPixel=&quot;456&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_EkHaIM7_Eeu95cTcIev-Dw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Cadastro.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot; name=&quot;Cadastro.java&quot; partName=&quot;Cadastro.java&quot; title=&quot;Cadastro.java&quot; tooltip=&quot;17Empresa/src/InterfaceGrafica/Cadastro.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/17Empresa/src/InterfaceGrafica/Cadastro.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1869&quot; selectionTopPixel=&quot;916&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-          <tags>activeOnClose</tags>
-        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_p5qJC7djEeuvJ6MwBCbfug" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
@@ -1006,7 +969,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_p5qJrLdjEeuvJ6MwBCbfug" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_w1oH5dLQEeuLGIME45roYw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_p5votrdjEeuvJ6MwBCbfug"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hVyPUNX9Eeuh3pk8dnnA1g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_p5votrdjEeuvJ6MwBCbfug"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_p5qJurdjEeuvJ6MwBCbfug" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1046,7 +1009,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_p5qwEbdjEeuvJ6MwBCbfug" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_w17C0NLQEeuLGIME45roYw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_p5voR7djEeuvJ6MwBCbfug"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hV91gNX9Eeuh3pk8dnnA1g" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_p5voR7djEeuvJ6MwBCbfug"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_p5qwHbdjEeuvJ6MwBCbfug" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
