@@ -2,6 +2,7 @@ package br.com.apex.clientes.repositorio;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -30,4 +31,12 @@ public interface RepositorioCliente extends CrudRepository <ClienteModelo, Integ
 
   // Contém determinado termo (LIKE)
   List<ClienteModelo> findByNomeContains(String termo);
+
+  //Contar registros
+  long count ();
+
+  // Agrupar por cidade
+  public static final String comandoSQL = "SELECT cidade, COUNT(*) FROM clientes GROUP BY cidade";
+  @Query(value = comandoSQL, nativeQuery = true)
+  List<Object> agruparCidades();
 }

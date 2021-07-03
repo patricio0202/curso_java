@@ -17,7 +17,7 @@ import br.com.projeto.produto.modelo.ProdutoModelo;
 import br.com.projeto.produto.repositorio.ProdutoRepositorio;
 
 @CrossOrigin(origins = "*")
-@RestController
+	@RestController
 public class ProdutoControle {
 	
 	@Autowired
@@ -34,7 +34,7 @@ public class ProdutoControle {
 	
 	@PostMapping(value="/api")
 	public @ResponseBody ProdutoModelo cadastrar(@RequestBody ProdutoModelo pm) {
-		return acao.save(pm);
+		return acao.save(pm);	
 	}
 	
 	@GetMapping(value="/api")

@@ -33,22 +33,31 @@ public class ClienteControle {
   }
 
   @GetMapping(value="/api")
-  public List<ClienteModelo> listar(){
+  public @ResponseBody List<ClienteModelo> listar(){
     return acoes.findAll();
   }
 
   @GetMapping(value="/api/nome")
-  public List<ClienteModelo> ListarPorNomes(){
+  public @ResponseBody List<ClienteModelo> ListarPorNomes(){
     return acoes.findByOrderByNomeAsc();
   }
 
   @GetMapping (value="/api/{nome}/{cidade}")
-  public ClienteModelo operadorE(@PathVariable String nome, @PathVariable String cidade){
+  public @ResponseBody ClienteModelo operadorE(@PathVariable String nome, @PathVariable String cidade){
     return acoes.findByNomeAndCidade(nome, cidade);
   }
 
   @GetMapping(value="/api/contem/{termo}")
-  public List<ClienteModelo> contem (@PathVariable String termo){
+  public @ResponseBody List<ClienteModelo> contem (@PathVariable String termo){
     return acoes.findByNomeContains(termo);
+  }
+
+  @GetMapping(value="/api/contador")
+  public @ResponseBody long contador(){
+    return acoes.count();
+  }
+  @GetMapping(value="/api/cidades")
+  public @ResponseBody List<Object> agruparCidades(){
+    return acoes.agruparCidades();
   }
 }
