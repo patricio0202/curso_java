@@ -1,6 +1,6 @@
 form{
   width: 50%;
-  margim: 30px auto;
+  margin: 30px auto;
   text-align: center;
 }
 
@@ -12,3 +12,4 @@ form input[type='button']{
   margin-left: 10px;
   width: 120px;
 }
+

@@ -276,7 +276,7 @@
         </form>
 
         {/* Table */}
-        <table className='table table-striped'>
+        <table  >
           <thead>
             <tr>
               <th>Código</th>

@@ -17,7 +17,7 @@ import br.com.projeto.produto.modelo.ProdutoModelo;
 import br.com.projeto.produto.repositorio.ProdutoRepositorio;
 
 @CrossOrigin(origins = "*")
-	@RestController
+			@RestController
 public class ProdutoControle {
 	
 	@Autowired

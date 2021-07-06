@@ -21,6 +21,9 @@ public interface MotoRepositorio extends CrudRepository<MotoModelo, Integer>{
 
   // Pesquisar
   MotoModelo findByCodigo (int codigo);
+
+  // Deletar
+  void delete(MotoModelo mm);
   
 }
 
