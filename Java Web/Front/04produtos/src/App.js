@@ -142,6 +142,8 @@
               textoAlerta :  'Alteração realizado com sucesso'
   
             })
+
+            this.setState({cadastro : true})
   
           })
       }
@@ -183,6 +185,8 @@
               textoAlerta :  'Produto deletado com sucesso'
   
             })
+
+            this.setState({cadastro : true})
   
           })
 
