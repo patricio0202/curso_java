@@ -164,7 +164,7 @@ export default class Moto extends React.Component{
         textoAlerta :  'Alteração realizado com sucesso'
         })
 
-        this.setState({cadastro : false});
+        this.setState({cadastro : true});
 
       })
   }
@@ -250,6 +250,7 @@ export default class Moto extends React.Component{
             textoAlerta :  'Produto deletado com sucesso'
           })
 
+          this.setState({cadastro : true});
           
        })
       
